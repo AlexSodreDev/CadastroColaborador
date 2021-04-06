@@ -32,6 +32,14 @@ class EmployeesController {
         return response.status(201).json(employee);
     }
 
+    async index(request: Request, response: Response) {
+        const employeesRepository = getCustomRepository(EmployeesRepository);
+
+        const employeeListAll = await employeesRepository.find();
+
+        response.json(employeeListAll)
+    }
+
     async findById(request: Request, response: Response) {
         const employeesRepository = getCustomRepository(EmployeesRepository);
 
