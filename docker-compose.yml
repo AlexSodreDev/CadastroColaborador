@@ -8,7 +8,7 @@ services:
     environment:
       POSTGRES_PASSWORD: example
       POSTGRES_USER: postgres
-      POSTGRES_DB: collaborator
+      POSTGRES_DB: employees
 
     ports:
       - "5432:5432"

@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import { CollaboratorController } from './controllers/CollaboratorControler';
+import { EmployeesController } from './controllers/EmployeesController';
 
 const router = Router();
 
-const collaboratorController = new CollaboratorController();
+const employeesController = new EmployeesController();
 
-router.get("/collaborator", collaboratorController.create);
+router.post("/employees", employeesController.create);
 
 export { router };
